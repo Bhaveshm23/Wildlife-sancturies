@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+
+		}
+	</style>
+
+
+</head>
+<body>
+<header>
+<div class="header">
+
+</header>
+
+<div class="topnav" id="myTopnav">
+
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  
+  <li><a href="about.html">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+  <a href="hoteljc.html">Accomodation</a>
+  <a href="florafauna.html">Flora and Fauna</a>
+  <a href="placejc1.html">Places of Interest</a>
+  <a href="plantrial.html">Plan your Safari</a>
+  <a href="reachjcfinal.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Corbett</h2></b><br><br>
+	<p>Ramnagar is perhaps the best approach to the Corbett National Park which forms the headquarters of CTR. This small city is well connected by road and rail network with major cities of India like Delhi, Moradabad, Nainital and Bareilly. Once you reach Ramnagar, then it takes only half an hour to reach Corbett National Park. The park is around 15 Kms from Ramnagar railway station. </p><br>
+	<div class="polaroid">
+	<img src="http://www.corbettadventureresort.co.in/discuss/wp-content/uploads/2015/04/corbett-tigers.jpg" style="width:100%;height:400px;">
+	</div>
+<h2>By Road:</h2>
+<p>Ramnagar has a very good network of road that connects the different cities. The Corbett National Park is situated at an approximate surface distance of 260 Kilometer from India's national capital Delhi. The state government of Uttarakhand plies buses at a short interval of time from Delhi, Moradabad, Haldawani, and Nainital that reaches Corbett directly.</p><br><br>
+
+<h2>By Rail:</h2>
+<p>The railway station in Ramnagar receives trains from different major cities of India like Delhi, Moradabad and Bareilly. A direct train to Ramnagar runs from Delhi. You can check out for Ranikhet Express, Corbett Link Express and Kathgodam Express that takes you directly to Ramnagar.</p>
+
+<h3>Distance from Major Cities:</h3><br>
+<p>Delhi: Delhi - Moradabad - Kashipur - Ramnagar (260 Kms)</p><br><br><br>
+<div id="map">
+
+</div>
+<br><br><br><p>Nainital: Via Kaladhungi to Ramnagar (62 Kms)</p><br><br>
+<p>Lucknow: Lucknow - Bareilly - Kicha - Rudrapur - Kashipur - Ramnagar (436 km)</p><br><br>
+<p>Dehradun : Dehradun - Ramnagar (232 km)</p><br>
+
+
+
+
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 29.548599, lng: 78.935303 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

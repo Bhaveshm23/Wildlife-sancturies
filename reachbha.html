@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		th,td{
+			padding:15px 15px;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+<header>
+<div class="header">
+<div style="color:white;
+	float:left;
+	padding-left: 10px;
+	padding-top: 15px;
+	font-size:200%">
+Sanctuaries of INDIA
+</div>
+
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1.html">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+	<a href="accombha.html">Accomodation</a>
+	<a href="florafaunabha.html">Flora and Fauna</a>
+	<a href="placebha.html">Places of Interest</a>
+	<a href="plantrialbha.html">Plan your Safari</a>
+	<a href="reachbha.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Bhadra Wildlife Sanctuary</h2></b><br><br>
+	<p>Bhadra Wildlife Sanctuary is a protected area and a Project Tiger Reserve located in Karnataka. Bhadra Wildlife Sanctuary is home to a variety of flora and fauna. There are more than 120 plant species in this sanctuary. Mammals in this sanctuary include elephant, gaur, sloth bear, wild boar, black leopard, jungle cat, jackal, wild dog, sambar, spotted deer, barking deer, mouse deer, common langur, bonnet macaque, slender loris, small Indian civet, common palm civet, pangolin, porcupine, flying squirrel and the Malabar giant squirrel. An estimated 33 tigers are found at Bhadra. If you are planning to take a trip from Bangalore to Bhadra Wildlife Sanctuary, here’s how you can reach.</p><br>
+	<div class="polaroid">
+	<img src="https://cdn.pixabay.com/photo/2016/07/07/11/20/sloth-1502299_960_720.jpg" style="width:100%;height:100%;">
+	</div>
+<h2>By Road:</h2> 
+<p>The distance between Bangalore and Bhadra Wildlife Sanctuary is 285.1 km and it can be covered in 5 to 8 hours depending on the route taken and the flow of traffic. There are 3 routes that one can choose from to reach Bhadra Wildlife Sanctuary from Bangalore by road. The shortest route includes driving through NH 48. An alternate route goes via NH4. The third route which takes the most number of hours includes traveling via NH4 and SH 65.</p><br>
+
+<h2>By Rail:</h2>  
+<p>The nearest Railway station to Bhadra is Kadur, 40kms away.</p><br>
+
+<h2>By Air:</h2>
+<p>The nearest airports are Mangalore (180kms) and Bangalore ( 275kms)</p><br>
+
+<br><p><b>Following is its location on Google Map:</b></p><br>
+
+<div id="map">
+
+</div>
+<br><br><p><i>Best season to visit Bhadra Wildlife Sanctuary is between October and March. Main Attractions: Tigers and Elephants</i></p>  
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 13.446887, lng: 75.574247 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

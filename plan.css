@@ -1,0 +1,61 @@
+#Main{width:1200px;padding:10px 0;margin:0 auto;}
+#Main h2{font-family:'Roboto', sans-serif;font-size:30px;color:#141414;margin:0px;play-during:0px;font-weight:normal;}
+#Main .article{float:left;width:284px;min-height:435px;box-shadow:1px 1px 2px #CCCCCC;border-radius:5px;margin:10px 21px 10px 0;background-color:#FFFFFF;}
+#Main .article:hover{border-radius:5px;box-shadow:1px 1px 5px #eeee;}
+#Main .article figure{margin:0 0 6px 0;}
+#Main .article figure img{width:100%;border-radius:5px 5px 0 0;}
+#Main .article h3{font-size:20px;color:#141414;font-weight:normal;margin:0px;padding:0 10px 4px;font-family:Georgia, "Times New Roman", Times, serif;border-bottom:dotted 1px #ccc;}
+#Main .article h3 a{text-decoration:none;color:#141414;}
+#Main .article h3 a:hover{text-decoration:none;color:#008A00;}
+#Main .article p{padding:10px;font-family:Georgia, "Times New Roman", Times, serif;font-size:15px;color:#464646;line-height:21px;text-align:justify;margin:0px;}
+#Main .article p a{font-weight:bold;text-decoration:none;color:#008A00;}
+#Main .article p a:hover{color:#000;}
+
+#Main .article1{float:right;}
+#Main .article1 p{padding:10px;font-family:Georgia, "Times New Roman", Times, serif;font-size:15px;color:#464646;line-height:21px;text-align:right;margin:0px;}
+#Main .article1 p a{font-weight:bold;text-decoration:none;color:#008A00;}
+#Main .article1 p a:hover{color:#000;}
+
+.NoMor{margin-right:0px !important;}
+#Main h3{font-family:'Roboto', sans-serif;font-size:30px;color:#141414;margin:0px;play-during:0px;font-weight:normal;padding:8px 0px;}
+#Left{float:left;width:575px;margin:15px 0 0 0;}
+#Right{float:right;width:575px;margin:15px 0 0 0;}
+.Hotels{float:left;width:555px;background-color:#FFFFFF;padding:15px 10px;border:solid 1px #ACACAC;border-radius:5px;}
+.Hotels .articles{margin:0 0 20px 0;width:100%;}
+.Hotels .articles > figure{float:left;width:246px;margin:0 15px 0 0;}
+.Hotels .articles > h4{font-size:20px;color:#141414;font-weight:normal;margin:0px;padding:0 10px;font-family:Georgia, "Times New Roman", Times, serif;}
+.Hotels .articles > h4 a{font-size:20px;color:#141414;text-decoration:none;}
+.Hotels .articles > h4 a:hover{color:#00B000;}
+.Hotels .articles > p{padding:0px 0;font-family:Georgia, "Times New Roman", Times, serif;font-size:15px;color:#464646;line-height:24px;text-align:justify;margin:0px;padding:0 0 18px;}
+.Hotels .articles .Read{border-radius:5px;background:#00B000;padding:12px 16px;color:#fff;text-decoration:none;font-family:'Roboto', sans-serif;}
+.Hotels .articles .Read:hover{background-color:#111;}
+.Hotels .articles .Read1{border-radius:5px;background:#DE6104;padding:12px 16px;color:#fff;text-decoration:none;font-family:'Roboto', sans-serif;}
+.Hotels .articles .Read1:hover{background-color:#111;}
+
+.Left-Part{background:none repeat scroll 0 0 #FFFFFF;float:left;padding:20px;width:800px;margin:50px 0 0 0;box-shadow:0px 0px 2px #CCCCCC;}
+.Left-Part h1{font-family:'Roboto', sans-serif;font-size:30px;color:#141414;margin:0px 0 6px;font-weight:normal;color:#333333;}
+.Left-Part p{padding:0px 0 15px;font:15px/30px 'Roboto';color:#333333;line-height:22px;text-align:justify;margin:0px;}
+.Left-Part h3{font-family:'Roboto', sans-serif !important;font-size:27px!important;color:#00A000!important;margin:0px 0 4px!important;padding:0px!important;font-weight:normal!important;}
+.Left-Part img{padding:0 0 12px;border-radius:3px;}
+#Right-Part{float:right;width:300px;margin:50px 10px 0 0;}
+#Main .article{width:24%;margin-right:1.2;}
+#Left{float:left;width:48%;}
+#Right{float:right;width:48%;}
+.Hotels{width:95%;}
+#Main h2{text-align:center;}
+.Left-Part{width:62%;margin:30px 0 0;}
+#Right-Part{margin:30px 0 0;}.Left-Part1{padding:10px; box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;}
+}
+
+#Main h2{font-size:24px;text-align:center;}
+#Main .article{width:98%;margin:0 0 4% 0;}
+.Hotels .articles > figure, img{width:70%;}
+.Hotels .articles > h4{padding:0;margin:6px 0;}
+.Left-Part{width:91%;}
+#Right-Part{width:100%;}.Left-Part1{width:100%;}
+}
+
+#Main h2, h3{font-size:18px !important;}
+.Left-Part{width:88%;}.Left-Part1{width:100%;}
+.Left-Part h1{font-size:24px;}
+.Left-Part h3{font-size:24px;}

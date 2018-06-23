@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+var likes=0;
+
+function like(){
+
+
+document.getElementById("show").innerHTML=likes;
+likes+=1;
+}
+
+</script>
+<style type="text/css">
+
+#button{
+background-color:#4CAF50;
+border:none;
+color:white;
+padding:15px 32px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:16px;
+margin:4px 2px;
+cursor:pointer;
+
+}
+</style>
+</head>
+<p type="text" id="show"></p>
+<button id="button" onclick="like()">LIKE</button>
+<h2>LIKES</h2>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		th,td{
+			padding:15px 15px;
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+<header>
+<div class="header">
+<div style="color:white;
+	float:left;
+	padding-left: 10px;
+	padding-top: 15px;
+	font-size:200%">
+Sanctuaries of INDIA
+</div>
+
+
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+
+  <li><a href=about.html">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+	<a href="accomban.html">Accomodation</a>
+	<a href="florafaunaban.html">Flora and Fauna</a>
+	<a href="placeban.html">Places of Interest</a>
+	<a href="plantrialban.html">Plan your Safari</a>
+	<a href="reachban.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Bandipur National Park</h2></b><br><br>
+	<p>Bandipur National Park is easily accessible by road, rail and air from Mysore which is the near-est city.</p><br>
+	<div class="polaroid">
+	<img src="http://media.makemyhangout.com/Bandipur-National-Park/Deer-Fighting-Bandipur-National-Park.jpg" style="width:100%;height:100%;">
+	</div>
+<h2>By Road:</h2> 
+<p>Bandipur is located at a distance of 80 kms from Mysore and 220 kms from Bangalore and 70 kms from Ooty. Bandipur is well connected by road and you could get here either by the State Transport buses, private buses, all stop at the Forest Reception office. It takes 2 hours from Mysore by a taxi.</p><br>
+
+<h2>By Rail:</h2>  
+<p>The Mysore railway station located at a distance of 80 kms is the major railway station closest to Bandipur. The Nanjungud railway station which is 55 kms from Bandipur is the nearest railway station.</p><br>
+
+<h2>By Air:</h2>
+<p>The closest airport- Mysore - 70 kms from Bandipur. Bangalore-International airport is 260kms to Bandipur.</p><br>
+
+<br><p><b>Following is its location on Google Map:</b></p><br>
+
+<div id="map">
+
+</div>
+<br><br><p><i>Bandipur is located in Gundlupet taluq of Chamarajanagar district. It is about 80 kilometers (50 mi) from the city of Mysore on the route to a major tourist destination of Ooty. As a result, Bandipur sees a lot of tourist traffic and there are many wildlife fatalities caused by speeding vehicles that are reported each year. There is a ban on traffic from 9 pm to 6 am of dusk to dawn to help bring down the death rate of wildlife.</i></p>  
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 11.665746, lng: 76.628485 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

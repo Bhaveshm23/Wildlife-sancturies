@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  
+  <li><a href="about.html">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+  <a href="girhotel.html">Accomodation</a>
+  <a href="girflora.html">Flora and Fauna</a>
+  <a href="girplace.html">Places of Interest</a>
+  <a href="girplantrial.html">Plan your Safari</a>
+  <a href="girreach.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Gir</h2></b><br><br>
+	<p>Ramnagar is perhaps the best approach to the Corbett National Park which forms the headquarters of CTR. This small city is well connected by road and rail network with major cities of India like Delhi, Moradabad, Nainital and Bareilly. Once you reach Ramnagar, then it takes only half an hour to reach Corbett National Park. The park is around 15 Kms from Ramnagar railway station. </p><br>
+	<div class="polaroid">
+	<img src="girreach.jpg" style="width:100%;height:400px;">
+	</div>
+
+<p> National Park attracts large number of tourists to witness the Asiatic lion, as this is the sole place all across the world where these creatures are presently found. Once extinct, numbers have been recovered owing to the conservation efforts. The Sanctuary is open for tourism from 16th October to 15th June every year.
+</p><br><br>
+
+ 
+<p>Junagadh is perhaps the best approach to the park. The railway station in Junagadh receives trains from different cities like Ahmedabad and Rajkot and other major cities. Then, from here it takes approximately one and half hour to reach Gir National Park. 
+</p>
+
+<h3>Distance from Major Cities:</h3><br>
+<p>From Rajkot-On reaching Rajkot Railway Station or Airport you can take a cab or bus and to reach a Limda chowk. There are a number of privately operated that go to Junagadh at frequent intervals. Junagadh is nearly 105 Kms from the city Rajkot and it takes nearly 2 and a half to 3 hours to cover the distance.From this point you have two options. First one is either you take a bus from gate number 11or 12 to Sasan Gir or travel by taxi that is accessible bang opposite the taxi stand. The taxi will take nearly one and half an hour and will charge reasonably and will drop you to Sasan Gir.</p><br><br><br>
+<div id="map">
+
+</div>
+<br><br><br><p>From Somnath to Gir National Park: Road Distance or the driving distance from the Gir National Park to Somnath is approximately 50 Kms and it takes nearly 1 hour to cover this distance. GSRTC buses and quite a few private buses ply between both the cities and take you directly to Sasan Gir Forest.</p><br><br>
+<p>From Diu To Gir Park: Diu airport is closest to the Gir National Park. From here you can hire that are present just outside the airport which will take you to Sasan Gir. Sasan Gir is nearly 110 kms airport of Diu and takes approximately 2 hours to cover this distance. If you have a late afternoon flight it is better to take a halt at Diu or can visit Somnath Temple which is nearly 80 kms from Diu and the road too is good except in little patches. It just takes an hour to reach Somnath from Diu. Next morning you can move on to Sasan Gir which is just 40 kms from here and just takes half an hour to cover this distance.Some other routes to reach Sasan Gir by road is from Keshod which also has an airport and is 45 kms, Veraval is 40 kms away, Junagadh is 55kms, Rajkot is 160Kms, Ahemedabad is 410Kms. The closeby railway stations are Sasan which is 40 Kms and Rajkot which is 160 Kms.</p><br><br>
+
+
+
+
+  
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat:21.1243, lng: 70.8242 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

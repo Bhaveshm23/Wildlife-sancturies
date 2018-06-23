@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</head>
+<body>
+<header>
+<div class="header">
+<div style="color:white;
+	float:left;
+	padding-left: 10px;
+	padding-top: 15px;
+	font-size:200%">
+Sanctuaries of INDIA
+</div>
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+  <ul>
+  <li><a href="nmenu1.html">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+  <a href="accombha.html">Accomodation</a>
+  <a href="florafaunabha.html">Flora and Fauna</a>
+  <a href="placebha.html">Places of Interest</a>
+  <a href="plantrialbha.html">Plan your Safari</a>
+  <a href="reachbha.html">How to reach there?</a>
+</div>
+<div>
+<p>Reckoned to be one of the best national parks in not only Karnataka but in India, Bhadra is a gem of wildlife reserve that a country can treasure. Located at a distance of 38 km northwest of Chikmagalur town. The sanctuary is surrounded by Mullaianagiri, Hebbegiri, Gangegiri and Bababudangiri hills and has the tributaries like Somavahini, Thadabehalla and Odirayanahalla of the Bhadra River flowing through it.</p> 
+<p>Here are some of the best places to visit near Bhadra Wildlife Sanctuary.</p>
+<ul style="background-color:white;">
+	<li><b>Mullayangiri Hills</b></li>
+	<br><br>
+		<img src="https://garnishednonsense.files.wordpress.com/2013/07/dsc_0220.jpg" style="width:100%;">
+		<p>One of the most picturesque destinations in the state of Karnataka, Chickmagalur entices visitors with the promise of good times, quiet escapes and verdant green plantations of coffee and lush jungles. It has long been the cynosure of all eyes that wanted to escape the sweltering monotony in life. Standing at a height of around 1,090m, the hills and mountains in this quaint hill station town entice plenitude of trekkers, nature lover, occasional vacationers and backpackers.</p>
+		<p>Mullayangiri trek which originates in these mountains is a true delight to behold if you are an adventure lover. The trekking trails on the Mullayangiri Hills will take you through some of the most rustic and naturally beautiful pathways.</p>
+		<p>Distance from Chikkamagaluru: 22.1 km</p>
+	<li><b>Shringeri Mutt</b></li>
+	<br><br>
+		<img src="http://www.cluster2.hostgator.co.in/files/writeable/uploads/hostgator50640/image/sringeri2014a.jpg" style="width:100%;height:100%;">
+		<p>Sringeri, also written as Shringeri is a hill town and Taluk headquarters located in Chikkamagaluru district in the state of Karnataka, It is the site of the first maṭha (Sringeri Sharada Peeta) established by Adi Shankara, Hindu theologian and exponent of the Advaita Vedanta philosophy, in the 8th century CE It is located on the banks of the river Tungā and also a historical Temple (1200 years).</p>
+		<p>The name Sringeri is derived from Rishyashringa-giri, a nearby hill that is believed to have contained the heritage of Rishi Vibhandaka and his son Rishyashringa. Rishyashringa appears in an episode in the Bala-Kanda of the Ramayana where a story, narrated by Vasishtha, relates how he brought rains to the drought-stricken kingdom of Romapada.</p>
+		<p>Distance from Chikkamagaluru: 85.8 km</p>
+	<li><b>Hebbe Falls</b></li>
+	<br><br>
+		<img src="https://www.holidify.com/images/compressed/attractions/attr_2073.jpg" style="width:100%; height:100%; ">
+		<p>Hebbe Falls (Kannada: ಹೆಬ್ಬೆ ಜಲಪಾತ) are situated about 10 km away from the famous hill station Kemmangundi in Karnataka, India. This waterfalls are inside a coffee estate and can be reached either by walk or four-wheeler. Hebbe Falls gushes down from a height of 551 ft in two stages to form Dodda Hebbe (Big Falls) and Chikka Hebbe (Small Falls). The option of trekking is available (as of Aug 2016), but the place is filled with leeches especially in the rainy season. The best option is to take a government approved forest jeep which goes through private estates. The last kilometer needs to trekked in order to reach the falls.</p>
+		<p>Distance from Chikkamagaluru: 65.6 km</p>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+<header>
+<div class="header">
+<div style="color:white;
+	float:left;
+	padding-left: 10px;
+	padding-top: 15px;
+	font-size:200%">
+Sanctuaries of INDIA
+</div>
+
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+ <a href="hotelper.html">Accomodation</a>
+  <a href="florafaunaper.html">Flora and Fauna</a>
+  <a href="placeper.html">Places of Interest</a>
+  <a href="plantrialper.html">Plan your Safari</a>
+  <a href="reachper.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Periyar National Park</h2></b><br><br>
+	<p>Periyar Wildlife Sanctuary (also known as the Thekkady Wildlife Sanctuary) is one of the premium wildlife sanctuaries in India and perhaps the finest in south India.</p><br>
+	<p>Situated in the picturesque environs of the Western Ghats hills in Kerala, the Periyar national park covers an area of approximately 777 sq km</p>
+	<p>The varied physical features, such as landscape and climate, of this jungle hold up a rich and varied flora and fauna. The topography of the park is highly undulating and boasts numerous narrow water streams.</p><br>
+	<div class="polaroid">
+	<img src="http://www.indianwildlife.org/images/header/periyar-birds.jpg" style="width:100%;height:100%;">
+	</div>
+<h2>By Road:</h2> 
+<p>Kumily, the nearest town from Periyar is well served by both state and private buses from Kottayam, Ernakulam and Madurai in Tamil Nadu.</p><br>
+
+<h2>By Rail:</h2> 
+<p>Kottayam at 114-kms is the nearest railhead from Periyar.</p><br>
+
+<h2>By Air:</h2>
+<p>Kochi (Cochin) at 200-kms or Madurai in Tamil Nadu at140-kms are nearest airports from Periyar.</p><br>
+<br><p><b>Following is its location on Google Map:</b></p><br>
+
+<div id="map">
+
+</div>
+<br><p><i>After heavy rains, chances of good wildlife sightings are very slim as the animals only come to the lake, when water sources inside the forest have dried up.So visit this magnificent wildlife sanctuary.</i></p>  
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 9.583920, lng: 77.118293 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

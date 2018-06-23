@@ -1,0 +1,121 @@
+﻿
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: yellow;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+/* Full-width input fields */
+input[type=text], input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+<title>VALIDATION PAYMENT FORM</title>
+</head>
+
+</style>
+<form  name='ContactForm' onSubmit="return ValidatePayment();" action="contact1.php" action="email.php" method="POST" target="_blank">
+<body background="background.jpg">
+
+<script src="form4.js"></script> 
+<div align="center">
+<link rel="stylesheet" type ="text/css" href="common.css">
+  
+  
+<br><br>
+ <fieldset>
+    <legend>Payment Information:</legend>
+    
+    <br>
+     <br>
+	 <h4>Card Number: </h4>
+    <input class="w3-input w3-section" type="text"  placeholder="card number(16 digit)"  name="cardnumber" required>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <h4>Date of Expiry: </h4>
+    <input class="w3-input w3-section" type="text" placeholder="date of expiry(mm/yy)"  name="dateofexpiry" required><br>
+    <h4>CVV: </h4>
+    <input class="w3-input w3-section" type="text" placeholder="cvv(3 digits at back)"  name="cvv" required><br>
+    <h4>Email id: </h4>
+    <input class="w3-input w3-section" type="text" placeholder="email id(akbirai119@gmail.com)"  name="emailid" required><br>
+    <h4>Password: </h4>
+    <input class="w3-input w3-section" type="password" placeholder="password(atleast 8 characters)"  name="password" required size="70"><br>
+    <h4>Phone number: </h4>
+    <input class="w3-input w3-section" type="text" placeholder="phone number for otp(9930530140)"  name="phone" required><br>
+    <h4>OTP: </h4>
+	<input class="w3-input w3-section" type="text" placeholder="otp(6 digit)"  name="otp" required><br>
+    <br><br>
+	<center><button class="w3-button w3-black w3-section" type="submit"  action="contact1.php">
+        <i class="fa fa-paper-plane"></i>PAY YOUR AMOUNT
+      </button></center>
+  </fieldset>
+     
+
+</form>
+<h3><?php include "email.php" ?></h3>
+
+</div>
+</body>
+
+
+

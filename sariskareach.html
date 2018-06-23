@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+<header>
+<div class="header">
+
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+  <a href="sarihotel.html">Accomodation</a>
+  <a href="sariflorafauna.html">Flora and Fauna</a>
+  <a href="sariskaplace.html">Places of Interest</a>
+  <a href="sariplan.html">Plan your Safari</a>
+  <a href="sariskareach.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Sariska National park</h2></b><br><br>
+	<p>Sariska National Park is one of the most visited national parks in the Alwar district of Jaipur, Rajasthan. Located around 107 kilometers away from Jaipur, this national park covers a vast expanse of 800 sq. kilometers area and is managed by the Government of Rajasthan. The National Park is divided into sections of deciduous forests, grasslands, rocky landscapes and steep cliffs. The sanctuary is also home to a variety of wildlife species such as leopards, Sambhar deer, hyenas, crocodiles, woodpeckers, boars, Indian tigers, peafowls and a number of other avian species and marsh animals. The Sariska National Park also encircles the 'Siliserh Lake' and the 'Jai Samand Lake', which are home to a number of crocodiles, water snakes and other amphibians. Although there are not many tourist destinations around Sariska, the National Park serves as the idyllic escape for tourists seeking tranquility and vast expanses of flora and fauna in Jaipur, Rajasthan.
+ </p><br>
+	<div class="polaroid">
+	<img src="http://www.corbettadventureresort.co.in/discuss/wp-content/uploads/2015/04/corbett-tigers.jpg" style="width:100%;height:400px;">
+	</div>
+<h2>By Road:</h2> 
+<p>Sariska Wildlife Sanctuary is located off the Delhi-Alwar-Jaipur Road. Jaipur is located 107 kilometers away from the wildlife sanctuary and 200 kilometers from the country's capital, New Delhi. Sariska is well-connected with Alwar, which is directly connected to NH-8.
+</p><br><br>
+
+<h2>By Rail:</h2> 
+<p>The nearest railway station is located at Alwar, 37 kilometers away from the Sariska Wildlife Sanctuary.
+</p><br>
+
+<h3>By Air:</h3>
+<p>The Jaipur Sanganer Airport is the nearest airport from Sariska and is located in Sanganer, approximately 107 kilometers from the National Park. All major destinations are well-connected to the Jaipur Airport.
+</p><br>
+
+<h3>Distance from Major Cities:</h3><br>
+<p>From Delhi 200 Kms. via Gurgaon –Dharuhera – Bhiwari Tijara - Kishangarhbas - Alwar.</p><br><br><br>
+<div id="map">
+
+</div>
+<br><br><br><p>From Jaipur 110 Kms. via Shahpura – Bairath – Thanagazi.</p><br><br>
+
+
+
+
+  
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 27.3285, lng: 76.4332 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

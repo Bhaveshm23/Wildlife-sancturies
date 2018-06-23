@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="common.css">
+<style>
+		* {
+			margin: 0;
+			padding: 0;
+			
+		}
+		#map {
+			height: 200px;
+			width: 70%;
+			margin-left:10%;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+<header>
+<div class="header">
+
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+<ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+ <a href="kanhahotel.html">Accomodation</a>
+  <a href="kanhaflora.html">Flora and Fauna</a>
+  <a href="kanhaplace.html">Places of Interest</a>
+  <a href="kanhaplantrial.html">Plan your Safari</a>
+  <a href="Kanhareach.html">How to reach there?</a>
+</div>
+
+
+
+
+<div class="center">
+<h2><b>How to Reach Kanha National park</h2></b><br><br>
+	<p>
+Spread across 940 sq.km, Kanha National Park is one of the largest parks in Madhya Pradesh where the majestic royal Bengal tigers are found in good numbers.<br>The Park is respected globally for saving the Barasingha from near extinction. No doubt, it is one of the best managed parks in Asia and a part of Project Tiger. National Geographic's award winning 'Land of the Tigers' was shot here, but the park is home to leopards, wild dogs and Barasingha as well.
+
+A safari in Kanha will surely get you thrilled, the way you were on your first trip to the zoo, as a child.Kanha National Park is situated at Mandla & Balaghat Districts of Madhya Pradesh State in Central India. Kanha National Park has excellent Air, Road & train connections from most parts of India. There are two key locations of Kanha National park, Khatia & Mukki Entrance gate. Khatia entrance gate falls on Mandla district & Mukki on Balaghat district of M. P. State. From Khatia Entrance gate one can explore Kisli, Kanha & Sarhi zones of Kanha national park & Mukki entrance gate covers Mukki range of the national park. Khatia Entrance gate is well connected from Jabalpur & Nagpur & Mukki entrance gate is from Jabalpur, Raipur & Nagpur. </p><br>
+	<div class="polaroid">
+	<img src="http://www.corbettadventureresort.co.in/discuss/wp-content/uploads/2015/04/corbett-tigers.jpg" style="width:100%;height:400px;">
+	</div>
+<h2>By Road:</h2> 
+<p>RNearest cities are Jabalpur (165 kms), Raipur, Nagpur. Jabalpur & Nagpur are on National Highway-7 which connects Varanasi to Kanyakumari.</p><br><br>
+
+<h2>By Rail:</h2> 
+<p>The nearest railway stations are Bilaspur (175 kms), Gondia (127 kms), Jabalpur (214 kms), Nagpur (280 kms) and Raipur (216 kms).</p><br><br>
+
+<h2>By Air:</h2>
+<p>Nearest airport is Jabalpur airport (170 kms) which is well connected to Delhi, Mumbai, Hyderabad, Bhopal and other major cities. Second best option is Nagpur airport (290 kms). Raipur airport (260 kms) can be preferred as the third option.</p><br><br>
+<h3>Distance from Major Cities:</h3><br>
+<p>Jabalpur: Jabalpur - Mandla - Kanha (Khatia gate)</p><br><br><br>
+<div id="map">
+
+</div>
+<br><br><br><p>Raipur: Raipur - Simga - Kawardha - Chilphi- Gadhi- Kanha (Mukki gate)</p><br><br>
+<p> Nagpur:Nagpur - Seoni - Balaghat - Baihar - Kanha (Mukki gate)</p><br><br>
+
+
+
+
+  
+</div>
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+
+      function initMap() {
+		var location = {lat: 22.3345, lng: 80.6115 };
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location,
+			map: map
+		});
+	}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00DXN2O-omAsa5ZD1M_yVBWMMHE9FKYI&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

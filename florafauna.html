@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+	margin-top:115px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+header {
+background-color:black;
+}
+header .header {
+overflow:hidden;
+position:relative;
+width:100%;
+height:70px;
+margin:0 auto;
+
+}
+header .search {
+float:right;
+margin-top:15px;
+width:400px;
+}
+header .search input[type=text] {
+background-color:#443e30;
+border:1px solid #2F2C29;
+color:#FFF;
+font-size:1em;
+height:20px;
+margin-right:5px;
+width:203px;
+padding:1px 0 0 3px;
+}
+header .search input[type=submit] {
+background-image:url(../images/search.gif);
+height:21px;
+width:60px;
+font-size:0.9em;
+border-width:0;
+}
+.logo {
+position:relative;
+width:100%;
+height:100px;
+margin:0 auto;
+background-color:lightgrey;
+float:left;
+
+}
+.logo img {
+margin:20px 10px;
+vertical-align:text-top;
+background-color:lightgrey;
+
+}
+#demo{
+text-align:center;
+}
+
+			.center{
+						width:93%;
+						height:500px;
+						margin:auto;
+						margin-left:2%;
+						margin-top:215px;
+						position:relative;
+						text-align:left;
+						transform :translateY(-50%);
+						padding:25px;
+
+			}
+
+			.center input{
+							padding:10px;
+							border:1px solid blue;
+			}
+
+			.center .sub_btn{
+								padding:10px 40px;
+			}
+
+
+			body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+h1,h2,h3,h4{
+
+		font-family:Georgia;
+		text-align:center;
+		}
+
+	.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-left:11%
+}
+
+.container {
+
+  text-align: center;
+  padding: 10px 20px;
+
+				}
+
+</style>
+</head>
+<body>
+<header>
+<div class="header">
+
+</header>
+
+<div class="topnav" id="myTopnav">
+
+  <ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+ 
+  <li><a href="about.html">About Us</a></li>
+</ul>
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+  <a href="hoteljc.html">Accomodation</a>
+  <a href="florafauna.html">Flora and Fauna</a>
+  <a href="placejc1.html">Places of Interest</a>
+  <a href="plantrial.html">Plan your Safari</a>
+  <a href="reachjcfinal.html">How to reach there?</a>
+</div>
+
+<div class="center">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+    <img src='tiger.jpg' style="width:90%,height:30%;">
+  <div class="text">tigers</div>
+</div>
+
+<div class="mySlides fade">
+  <img src='elephant.jpg' style="width:90%,height:80%;">
+  <div class="text">elephants</div>
+</div>
+
+<div class="mySlides fade">
+  <img src='safari.jpg'style="width:90%,height:30%";>
+  <div class="text">jungle safari</div>
+</div>
+
+<div class="mySlides fade">
+  <img src='redstart.jpg'style="width:100%,height:30%";>
+  <div class="text">Peterdargatz</div>
+</div>
+
+<div class="mySlides fade">
+  <img src='grasssnake.jpg'style="width:90%,height:30%";>
+  <div class="text">reptiles</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+</div>
+<div class="center">
+<h>FLORA FAUNA IN JIM CORBETT:</h><br><text-align:center>
+<p>Jim Corbett National Park is considered as the main wildlife attraction of Uttarakhand. </p>
+<p>It is located amongst two main regions of this state Kumaon and Garhwal. It’s named for legendary tiger hunter Jim Corbett (1875 - 1955), he put Kumaon on the map with his book The Man Eaters of Kumaon. The park is spread over 1318-sq-km contains verity of wildlife, birdlife in its grassland, Sal forests, riverine belts and amazing scenic location of Himalayas foothills. Main Attraction of Corbett National Park are - Royal Bengal Tiger, wild elephants, sloth deer including (spotted dear), Sambar, hog deer and barking deer. You might also see Leopards, mugger, crocodiles, Gharials, monitor lizards, wild boars and jackals. More than 600 species of birds are spotted here. The Ramganga reservoir attracts large numbers of migrating birds, especially from mid-December to the end of March. Main flora of this park is Sal, Kair, Sheesam, Bel, Dhak, Semal, Rohini, Bakli, Chbila etc. Corbett’s main five tourist zones are – Bijrani, Dhikala, Domunda, Jhirna and Sonanadi. All gates are open 15 November to 15 June only Jhirna zone opens round of the year. You must have park entry permits to sign up for a day visit and overnight stay inside the forest lodge of the park. All kind of online entry tickets can book by corbettparkonline.com in advance basis.</p>
+ <p>Best chance for tiger sighting in Corbett is March to June, during this time grass cover is low and animals visibility is being clear, when they come out in search of water.
+</P>
+<p>Flora: There are almost<b>488</b>different types of species of plants in the park.A total of 488 different species of plants have been recorded in the park. Tree density inside the reserve is higher in the areas of Sal forests and lowest in the Anogeissus-Acacia catechu forests. Total tree basal cover is greater in Sal dominated areas of woody vegetation. Healthy regeneration in sapling and seedling layers is occurring in the Mallotus philippensis, Jamun and Diospyros tomentosa communities, but in the Sal forests the regeneration of sapling and seedling is poor.<br><br>
+
+Fauna: This Park has almost <b>33</b> different species of reptiles, <b>7</b> different species of amphibians, around <b>7</b> different species of fish and <b>37</b> different species of dragonflies.
+Bengal tigers, although plentiful, are not easily spotted due to the abundance of foliage - camouflage - in the reserve. Thick jungle, the Ramganga river and plentiful prey make this reserve an ideal habitat for tigers who are opportunistic feeders and prey upon a range of animals. The tigers in the park have been known to kill much larger animals such as buffalo and even elephant for food. The tigers prey upon the larger animals in rare cases of food shortage. There have been incidents of tigers attacking domestic animals in times of shortage of prey.
+
+Leopards are found in hilly areas but may also venture into the low land jungles. Small cats in the park include the jungle cat, fishing cat and leopard cat. Other mammals include barking deer, sambar deer, hog deer and chital, sloth and Himalayan black bears, Indian grey mongoose, otters, yellow-throated martens, Himalayan goral, Indian pangolins, and langur and rhesus macaques. Owls and nightjars can be heard during the night.
+
+In the summer, Indian elephants can be seen in herds of several hundred. The Indian python found in the reserve is a dangerous species, capable of killing a chital deer. Local crocodiles and gharials were saved from extinction by captive breeding programs that subsequently released crocodiles into the Ramganga river.
+
+</p>
+
+</div>
+
+
+
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+</body>
+</html>

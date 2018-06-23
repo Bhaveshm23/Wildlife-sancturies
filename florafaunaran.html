@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+	margin-top:115px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+header {
+background-color:black;
+}
+header .header {
+overflow:hidden;
+position:relative;
+width:100%;
+height:70px;
+margin:0 auto;
+
+}
+header .search {
+float:right;
+margin-top:15px;
+width:400px;
+}
+header .search input[type=text] {
+background-color:#443e30;
+border:1px solid #2F2C29;
+color:#FFF;
+font-size:1em;
+height:20px;
+margin-right:5px;
+width:203px;
+padding:1px 0 0 3px;
+}
+header .search input[type=submit] {
+background-image:url(../images/search.gif);
+height:21px;
+width:60px;
+font-size:0.9em;
+border-width:0;
+}
+.logo {
+position:relative;
+width:100%;
+height:100px;
+margin:0 auto;
+background-color:lightgrey;
+float:left;
+
+}
+.logo img {
+margin:20px 10px;
+vertical-align:text-top;
+background-color:lightgrey;
+
+}
+#demo{
+text-align:center;
+}
+
+			.center{
+						width:93%;
+						height:500px;
+						margin:auto;
+						margin-left:2%;
+						margin-top:215px;
+						position:relative;
+						text-align:left;
+						transform :translateY(-50%);
+						padding:25px;
+						
+			}
+			
+			.center input{
+							padding:10px;
+							border:1px solid blue;
+			}
+			
+			.center .sub_btn{
+								padding:10px 40px;
+			}
+			
+	
+			body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+	
+		
+	
+
+
+h1,h2,h3,h4{
+
+		font-family:Georgia;
+		text-align:center;
+		}
+		
+	.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-left:11%
+}
+
+.container {
+	
+  text-align: center;
+  padding: 10px 20px;
+  
+				}
+
+</style>
+</head>
+<body>
+<header>
+<div class="header">
+<div style="color:white;
+	float:left;
+	padding-left: 10px;
+	padding-top: 15px;
+	font-size:200%">
+Sanctuaries of INDIA
+</div>
+<div class="search">
+<form action="" method="get">
+<input type="text" name="q" value="" />
+<input type="submit" value="search" />
+</form>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  
+  <ul>
+  <li><a href="nmenu1trial.php">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Featured</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+  <li><a href="#about">About Us</a></li>
+</ul>
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <br><br>
+	<a href="hotelran.html">Accomodation</a>
+	<a href="florafaunaran.html">Flora and Fauna</a>
+	<a href="placeran.html">Places of Interest</a>
+	<a href="plantrialran.html">Plan your Safari</a>
+	<a href="reachran.html">How to reach there?</a>
+</div>
+
+<div class="center">
+
+<div class="slideshow-container">
+
+<a href="https://en.wikipedia.org/wiki/Python_%28genus%29"><div class="mySlides fade">
+  <img src='https://cdn.pixabay.com/photo/2014/11/23/21/22/green-tree-python-543243_960_720.jpg' style="width:100%">
+  <div class="text">python</div>
+</div></a> 
+
+<div class="mySlides fade">
+    <img src='https://cdn.pixabay.com/photo/2014/10/27/22/03/forest-505860_960_720.jpg' style="width:100%">
+  <div class="text">dhok forest</div>
+</div>
+
+<a href="https://en.wikipedia.org/wiki/Indian_grey_hornbill"><div class="mySlides fade">
+  <img src='https://c1.staticflickr.com/2/1338/5103844435_c7e206b3bb_b.jpg' style="width:100%">
+  <div class="text">indian grey hornbill</div>
+</div></a>
+
+<a href="https://en.wikipedia.org/wiki/Tiger"><div class="mySlides fade">
+  <img src='https://cdn.pixabay.com/photo/2015/05/15/14/35/tiger-768574_960_720.jpg'style="width:100%";>
+  <div class="text">tiger</div>
+</div>
+
+<a href="https://en.wikipedia.org/wiki/Indian_flying_fox"><div class="mySlides fade">
+  <img src='http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/32/6r/p0326rhc.jpg'style="width:100%";>
+  <div class="text">indian flying fox</div>
+</div></a> 
+ 
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+</div>
+<div class="center">
+
+<h3 style="text-align:left">RANTHAMBORE NATIONAL PARK</h3><br>
+Ranthambore National park contains a huge variety of animals, birds and reptiles, and trees and plants within it. Primarlily the population consists of...
+<h4 style="text-align:left">Flora</h4>
+<p>The vegetation in the park is mostly of the dry deciduous type with a large variety consisting of nearly 300 species. The majority of the tree cover is however mainly made up of :
+
+<br>1. Am (Magnifera iIndica)
+<br>2. Imli (Tamarindicus indica) 
+<br>3. Babul (Accasia nilotica) 
+<br>4. Banyan (F icus benghalensis) 5. Ber (Zizyphus mauritania)
+<br>6. Dhak or Chila (flame of the forest){Butea monosperma}
+<br>7. Dhok (Anogeossis pendula)
+<br>8. Jamun (Syzygium cumini)
+<br>9. Kadam (Authocephalus cadamba)
+<br>10. Khajur (Phoenix sylvestris)
+<br>11. Khair (Accacia catechu) 
+
+<br><br>The forests of Ranthambore have a lot of contrasting vegetation
+<br>12. Karel (Capparis decidua)
+<br>13. Khejda (Prosopis specigera)
+<br>14. Kakera (Flacourtia indica)
+<br>15. Mohua (Madhuca indica)
+<br>16. Neem (Azadirachta indica)
+
+<br><br>Dhok forms a majority of the tree cover</p>
+<h4 style="text-align:left">Fauna</h4>
+<p>MAMMAL: Tigers, Leopards, Striped Hyenas, Sambar deer, Chital, Nilgai, Common or Hanuman langurs, Macaques, Jackals, Jungle cats, Caracals, Sloth bears, Black bucks, Rufoustailed Hare, Indian Wild Boar, Chinkara, Common Palm Civets or Toddy cat, Coomon Yellow Bats, Desert Cats, Fivestriped Palm Squirels, Indian False Vampires, Indian Flying Foxes, Indian Foxes, Indian Gerbilles, Indian Mole Rats, Indian Porcupines, Longeared Hedgehogs, Ratels, Small Indian Mongoose, Small Indian Civets and Common mongoose.The park is most famous for it's diurnal tigers.</p>
+<p>BIRDS: Ranthambore, due to its varied terrain and abundance of water bodies, has an excellent population of birds, resident and migrant. In total, a list of 272 species have been documented. Some of the best locations to watch birds are Malik Talao, the Ranthambore Fort, Rajbagh Talao, Padam Talao and in the Jhalra area. The most important birds in Ranthambore include's Graylag Goose, Woodpeckers, Indian Gray Hornbills, Common Kingfishers, Bee Eaters, Cuckoos, Parakeets, Asian Palm Swift, Owl, Nightjars, Pigeon, Dove, Crakes, Snipes, Sandpipers, Gulls, Terns, Great Crested Grebe, Eagles, Darters, Cormorants, Egrets, Herons, Bitterns, Flamingos, Ibis, Pelicans, Storks, Pittas, Shrikes, Treepies, Crows, Orioles, Cuckoo-Shrikes, Minivets, Drongos, Flycatchers, Ioras, Wood Shrikes, Pipits, Bayas, Sparrows, Finches, Wagtails, Munias, Bulbul, Mynas, Falcons etc.</p>
+<p>REPTILES: The park also has a large number of marsh crocs Reptiles: Snub Nosed Marsh Crocodiles, Desert Monitor Lizards, Tortoise, Banded Kraits, Cobras, Common Kraits, Ganga Soft Shelled Turtles, Indian Pythons, North Indian Flap Shelled Turtles, Rat Snakes, Russel's Vipers, Saw-scaled Vipers and the Indian Chamaeleon.</p>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+</body>
+</html>
